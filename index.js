@@ -32,7 +32,7 @@ module.exports = {
   },
 
   _treeForGlamor() {
-    const umdDist = path.join(path.dirname(require.resolve('glamor/package.json')), 'umd');
+    const umdDist = path.join(path.dirname(require.resolve('@headspace/glamor/package.json')), 'umd');
 
     return new Funnel(umdDist, {
       include: ['index.js'],
@@ -42,7 +42,7 @@ module.exports = {
 
   _treeForGlamorReset() {
     // glamor provides a es6 dist, we'll use that to avoid babel
-    const resetPath = path.dirname(require.resolve('glamor/reset'));
+    const resetPath = path.dirname(require.resolve('@headspace/glamor/reset'));
     return new Webpack([ resetPath ], {
       entry: './reset.js',
       output: {

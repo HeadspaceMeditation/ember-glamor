@@ -6,7 +6,7 @@ module.exports = {
 
   afterInstall: function() {
     return this.addPackagesToProject([
-      { name: 'glamor', target: '^2.20.12' }
+      { name: '@headspace/glamor', target: '^2.20.26' }
     ]);
   }
 };
